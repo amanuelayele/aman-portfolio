@@ -1,0 +1,188 @@
+.About {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+/*image plusing*/
+.About img {
+  width: 400px;
+  height: 500px;
+  border-radius: 20px; /* Optional: Adds rounded corners */
+  object-fit: cover; /* Ensures the image fits perfectly */
+  animation: pulse 2s ease-in-out infinite; /* Apply the pulsing animation */
+}
+
+/* Define the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.05); /* Slightly larger */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
+}
+
+.About-title {
+  position: relative;
+}
+.About-title h1 {
+  position: relative; /* Make it the reference point for the pseudo-element */
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center; /* Center the title */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.About-title h1::after {
+  content: ""; /* Adds the line */
+  position: absolute;
+  bottom: -10px; /* Position below text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) scaleX(0); /* Start with no width */
+  transform-origin: center; /* Scale from center */
+  width: 200px; /* Final width */
+  height: 4px; /* Thickness */
+  background: linear-gradient(90deg, #87ceeb, #006400); /* Gradient color */
+  border-radius: 2px; /* Rounded edges */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.About-title h1:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Expand to full width on hover */
+}
+.About-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+.About-sections {
+  display: flex;
+  gap: 80px;
+}
+.About-right {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.About-para {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-weight: 500;
+  font-size: 24px;
+}
+.About-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.About-skill {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  transition: 0.3s;
+}
+.About-skill p {
+  min-width: 150px;
+  font-size: 24px;
+  font-weight: 500;
+}
+.About-skill hr {
+  outline: none;
+  border: none;
+  width: 50%;
+  height: 8px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+}
+.About-achievements {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 80px;
+}
+.About-achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s;
+}
+.About-achievement h1 {
+  font-size: 60px;
+  font-family: 700;
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.About-achievement p {
+  font-size: 22px;
+  font-weight: 500;
+}
+.About-skill:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.About-achievement:hover {
+  transform: scale(1.12);
+  transition: 0.5s;
+}
+@media (max-width: 768px) {
+  .About {
+    gap: 80px;
+    margin: 50px 70px;
+    align-items: start;
+  }
+  .About-title h1 {
+    font-size: 50px;
+    padding: 0;
+  }
+  .About-title img {
+    width: 130px;
+    right: -20px;
+  }
+  .About-sections {
+    flex-direction: column;
+  }
+  .about-left {
+    display: none;
+  }
+  .About-para {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .About-skill {
+    gap: 20px;
+    align-items: center;
+  }
+  .About-skill p {
+    font-size: 20px;
+  }
+  .About-skill hr {
+    height: 6px;
+  }
+  .About-achievements {
+    justify-content: space-between;
+  }
+  .About-achievement {
+    gap: 10px;
+  }
+  .About-achievement h1 {
+    font-size: 34px;
+    font-weight: 700;
+  }
+  .About-achievement p {
+    text-align: center;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,121 @@
+.Hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.Hero img {
+  margin-top: 50px;
+  width: 400px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image fits perfectly within the circle */
+  border: 3px solid #87ceeb; /* Optional: Add a border for styling */
+  animation: bounce 2s ease infinite; /* Add bouncing animation */
+}
+
+/* Define the bounce animation */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Moves up slightly */
+  }
+}
+
+.Hero h1 {
+  text-align: center;
+  width: 70%;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.Hero h1 span {
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Hero p {
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.Hero-action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.Hero-resume a {
+  color: #fff;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Use the current text color */
+}
+.Hero-resume a:hover {
+  color: #006400;
+}
+.Hero-connect,
+.Hero-resume {
+  padding: 25px 75px; /* Default padding, can be adjusted */
+  border-radius: 50px;
+  cursor: pointer;
+  transition: border 0.3s; /* Smooth border transition */
+}
+
+.Hero-connect {
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+}
+
+.Hero-resume {
+  border: 2px solid #fff; /* White border */
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+}
+
+.Hero-connect:hover {
+  border: 2px solid white; /* White border on hover */
+}
+
+.Hero-resume:hover {
+  border-color: #b415ff; /* Change border color on hover */
+}
+
+@media (max-width: 768px) {
+  .Hero img {
+    margin-top: 120px;
+    width: 320px;
+  }
+
+  .Hero h1 {
+    margin-top: 50px;
+    width: 90%;
+    font-size: 50px;
+  }
+
+  .Hero p {
+    width: 60%;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 10px 0;
+  }
+
+  .Hero-action {
+    gap: 16px;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .Hero-connect,
+  .Hero-resume {
+    padding: 20px 30px;
+    border-radius: 40px;
+  }
+}

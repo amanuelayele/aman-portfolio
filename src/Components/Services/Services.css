@@ -1,0 +1,175 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+
+.services-title {
+  position: relative; /* Make it the reference point for the pseudo-element */
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center; /* Center the title */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.services-title::after {
+  content: ""; /* Adds the line */
+  position: absolute;
+  bottom: -10px; /* Position below text */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) scaleX(0); /* Start with no width */
+  transform-origin: center; /* Scale from center */
+  width: 200px; /* Final width */
+  height: 4px; /* Thickness */
+  background: linear-gradient(90deg, #87ceeb, #006400); /* Gradient color */
+  border-radius: 2px; /* Rounded edges */
+  transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.services-title:hover::after {
+  transform: translateX(-50%) scaleX(1); /* Expand to full width on hover */
+}
+
+.services-title h1 {
+  padding: 0px 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.services-container {
+  display: flex; /* Use flex for horizontal layout */
+  flex-direction: row; /* Align categories horizontally */
+  gap: 40px; /* Space between categories */
+}
+
+.service-category {
+  border: 2px dashed #87ceeb; /* Dashed border for categories */
+  padding: 20px; /* Padding inside category */
+  border-radius: 10px; /* Rounded edges */
+  background-color: rgba(135, 206, 235, 0.1); /* Light background */
+  flex: 1; /* Allow categories to grow equally */
+}
+
+.services-group {
+  display: flex;
+  flex-direction: column; /* Stack services vertically */
+  gap: 20px;
+}
+
+.services-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px; /* Slightly reduced padding */
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.services-format h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.services-format h2 {
+  font-size: 30px; /* Slightly adjusted font size */
+  font-weight: 800;
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-format p {
+  color: #d4d4d4;
+  font-size: 24px;
+  line-height: 40px;
+  max-width: 300px;
+}
+
+.services-readmore {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-format:hover {
+  border: 2px solid #87ceeb;
+  background: linear-gradient(267deg, #87ceeb 0.36%, #006400 102.06%);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+.service-category h2 {
+  font-size: 48px; /* Adjust font size */
+  font-weight: 700; /* Bold font weight */
+  color: #d4d4d4; /* Dark green color */
+  margin-bottom: 10px; /* Space below the title */
+  text-align: left; /* Align text to the left */
+  position: relative; /* For pseudo-element positioning */
+  padding: 10px 0; /* Add padding for better spacing */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.service-category h2::after {
+  content: ""; /* Create a decorative line */
+  display: block; /* Make it a block element */
+  width: 60px; /* Width of the line */
+  height: 4px; /* Thickness of the line */
+  background-color: #87ceeb; /* Line color */
+  margin-top: 5px; /* Space above the line */
+  border-radius: 2px; /* Rounded edges */
+  position: absolute; /* Position relative to the h2 */
+  left: 0; /* Align to the left */
+}
+
+/*media part */
+/* Media Queries */
+@media (max-width: 768px) {
+  .services {
+    align-items: center; /* Center items for better alignment */
+    gap: 40px; /* Adjust gap to be smaller */
+    margin: 20px 10px; /* Reduce margins for mobile */
+  }
+
+  .services-title h1 {
+    padding: 0;
+    font-size: 50px; /* Smaller font for better fit */
+  }
+
+  .services-container {
+    flex-direction: column; /* Stack categories vertically */
+    gap: 20px; /* Adjusted gap between categories */
+  }
+
+  .service-category {
+    width: 100%; /* Full width for categories */
+    border: none; /* Remove border for a cleaner look on mobile */
+    background-color: rgba(135, 206, 235, 0.2); /* Slightly darker background */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .services-format {
+    padding: 20px; /* Reduce padding to fit better */
+  }
+
+  .services-format h2 {
+    font-size: 30px; /* Smaller font size for service titles */
+  }
+
+  .services-format p {
+    font-size: 18px; /* Smaller font for descriptions */
+    line-height: 28px; /* Adjust line height */
+  }
+
+  .services-readmore {
+    flex-direction: column; /* Stack read more elements vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+}
