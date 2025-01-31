@@ -5,7 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Hero = () => {
   return (
     <div id="home" className="Hero">
-      <img src="/assets/aman.JPG" alt="Amanuel Ayele" />
+      <img src="./assets/aman.JPG" alt="Amanuel Ayele" />
       <h1>
         <span>I'm Amanuel Ayele,</span> a frontend developer based in Ethiopia{" "}
       </h1>
@@ -20,7 +20,7 @@ const Hero = () => {
           </AnchorLink>
         </div>
         <div className="Hero-resume">
-          <a href="/assets/aman cv.pdf" download>
+          <a href="./assets/aman cv.pdf" download>
             My Resume
           </a>
         </div>

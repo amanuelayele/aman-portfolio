@@ -9,7 +9,7 @@ const About = () => {
       </div>
       <div className="About-sections">
         <div className="About-left">
-          <img src="/assets/aman.JPG" alt="My Profile" />
+          <img src="./assets/aman.JPG" alt="My Profile" />
         </div>
         <hr />
         <div className="About-right">
